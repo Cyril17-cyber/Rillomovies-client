@@ -1,0 +1,173 @@
+.nav {
+    padding: 30px 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo { img{ height: 60px; } }
+    
+    &_links {
+        display: flex;
+        align-items: center;
+        a, button {
+            text-decoration: none;
+            color: $DarkGrayishViolet;
+            font-weight: 800;
+            &:not(:last-child) {
+                margin-right: 3rem;
+            }
+            &:hover {color: $DarkViolet;}
+        }
+        button {
+            background: transparent;
+            border: 0px;
+            outline: 0px;
+        }
+    }
+    .method {border-left: 1px solid $DarkGrayishViolet;
+        display: flex;
+        align-items: center;
+        margin-left: 12px;
+
+        a, svg {
+            margin-left: 20px;
+        }
+        svg{cursor: pointer;}
+        a {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 10px;
+            background: $DarkViolet;
+            border: 1px solid $DarkViolet;
+            &:hover {
+                background: #fff;
+                color: $DarkViolet;
+            }
+        }
+    }
+    
+    #hamburger {
+        display: none;
+        background: $DarkViolet;
+        padding: 12px;
+        border: 1px solid $VeryDarkViolet;
+        > span {
+            display: block;
+            width: 26px;
+            height: 2px;
+            background-color: #fff;
+            transform-origin: 3px 1px;
+    
+            &:not(:last-child) {
+                margin-bottom: 5px;
+            }
+        }
+    }
+}
+
+.dashNav {
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    right: 0;
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
+    .css-2uchni {
+        margin-right: 20px;
+    }
+    .css-i0j9gx-MuiSnackbar-root {
+        @media(min-width: 600px) {
+            bottom: auto !important;
+        }
+    }
+
+    .searchSection {
+        overflow-y: auto;
+        max-height: 60%;
+        padding: 25px 20px;
+        width: 21rem;
+        background: #fff;
+        position: fixed;
+        left: 27em;
+        transform: translate(-24em, 11px);
+        z-index: 3;
+        box-shadow: 4px 5px 7px #2b272f;
+        border-radius: 7px;
+        ul {
+            padding: 0px;
+            list-style: none;
+            display: grid;
+            grid-row-gap: 20px;
+            li a {
+                color: #2b272f;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                border-bottom: 1px solid $VeryDarkViolet;
+                padding: 10px 0px;
+                h4, p, img {margin: 0px 0px 0px 10px};
+                img {width: 33%;}
+            }
+        }
+    }
+}
+
+.css-hip9hq-MuiPaper-root-MuiAppBar-root, .css-1gnz8kn-MuiBottomNavigation-root {
+    background-color: $VeryDarkViolet !important;
+}
+
+.css-1bjk3jo-MuiButtonBase-root-MuiBottomNavigationAction-root.Mui-selected {
+    color: $white !important;
+}
+.css-118p9r0-MuiButtonBase-root-MuiBottomNavigationAction-root {
+    color: rgba(255, 255, 255, 0.452) !important;
+}
+
+.logout {
+    z-index: 5;
+    box-shadow: -5px 7px 11px 6px #2b272f;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-90px, -50px);
+    background: #fff;
+    border-radius: 7px;
+    padding: 0px 20px 20px 20px;
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__links {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        button {
+            background: transparent;
+            border: 0px;
+            outline: 0px;
+            color: $DarkGrayishViolet;
+            font-weight: 800;
+            &:hover {color: $DarkViolet;}
+        }
+
+        .proceed {
+            color: #fff;
+            padding: 10px 15px;
+            border-radius: 10px;
+            background: $DarkViolet;
+            border: 1px solid $DarkViolet;
+            &:hover {
+                background: #fff;
+                color: $DarkViolet;
+            }
+        }
+    }
+}

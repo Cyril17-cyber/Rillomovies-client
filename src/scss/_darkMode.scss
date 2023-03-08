@@ -1,0 +1,153 @@
+.App {
+    &.DarkMode {
+        .css-1n7gpw1-MuiSkeleton-root {
+            background-color: rgba(255, 255, 255, 0.308);
+        }
+        .css-pl5i8u-MuiPaper-root-MuiCard-root {
+            background-color: $VeryDarkViolet
+        }
+        .logout {
+            box-shadow: -5px 7px 11px 6px #000;
+            background: $VeryDarkViolet;
+            color: $white;
+            &__links { button {
+                color: #dbdbdb; &:hover {color: $white}
+            } .proceed {
+                color: $DarkViolet;
+                background: $white;
+                border: 1px solid $white;
+            &:hover {
+                background: $VeryDarkViolet;
+                color: $white;
+            }
+            }}
+        }
+        .nav {
+            background: $VeryDarkViolet;
+            &_links {
+                a, button {
+                    color: rgb(236, 236, 236);
+                    &:hover {color: $white;}
+                }
+            }
+            .method {
+                border-color: $white;
+                svg {color: $white;}
+                a {
+                    color: $VeryDarkViolet;
+                    background: $white;
+                    border-color: $white;
+                    &:hover {
+                        background: $VeryDarkViolet;
+                        color: $white;
+                    }
+                }
+            }
+            #hamburger {
+                background: rgb(236, 236, 236);
+                border-color: $white;
+                > span {background-color: $DarkViolet;}
+            }
+        }
+
+        .mobileNav {
+            background: $VeryDarkViolet;
+            background-image: url('../images/bg-pattern-mobile-nav.svg');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: bottom;
+            a {color: $white;}
+        }
+        .about, .terms {
+            background: $DarkMode;
+            color: $white;
+            a {color: $white;}
+        }
+        .landing-page {
+            .about {
+                background: $DarkMode;
+                h1 {color: $white;}
+            }
+            .banner {
+                background: $DarkMode;
+                .text {
+                    p {color: #c9c4cd;}
+                    h1 {color: $white}
+                    a {
+                        color: $DarkMode;
+                        background-image: linear-gradient(to right, rgb(236, 236, 236), $white);
+                    }
+                }
+            }
+        }
+        .features, .landing-page .features, .register, .home, .favourites {
+            background: $VeryDarkViolet;
+            color: $white;
+        }
+        .account {
+            background: $DarkMode; color: $white;
+            .detail {
+                box-shadow: 0px 0px 0px 1px #ffffff;
+                &:hover {
+                    box-shadow: 1px 1px 13px 2px #fff;
+                }
+            }
+            .icon {background: $DarkMode;}
+            button {
+                background: $white;
+                color: $DarkMode;
+                border: 1px solid $white;
+                &:hover {
+                    background: $DarkMode;
+                    color: $white;
+                }
+            }
+        }
+        .favMovie a {
+            border: 1px solid #ffffff;
+            box-shadow: 7px 8px 12px #000000;
+        }
+        .input {
+            input {background: $VeryDarkViolet; color: $white;}
+            #lName, #fName, #email, &Password {
+                border: 1px solid $white;
+                outline: $white;
+            }
+        }
+        .register form {
+            button {
+                background: $white;
+                color: $VeryDarkViolet;
+                border: 1px solid $white;
+                &:hover {
+                    background: $VeryDarkViolet;
+                    color: $white; 
+                }
+            }
+            a {color: $white;}
+        }
+        .MuiCircularProgress-svg {color: $white}
+        .otp {.alt{.resend{color: $white;}}}
+        .dashNav .searchSection {
+            background: $VeryDarkViolet;
+            ul li a {
+                color: #fff;
+                border-bottom: 1px solid #fff;
+            }
+        }
+        .home {
+            .css-11wkdud-MuiCardContent-root, .css-1i0zp89-MuiCardActions-root {
+                background: $VeryDarkViolet;
+            }
+            .css-tcikc6-MuiPaper-root-MuiCard-root {
+                box-shadow: 5px 1px 7px 0px #000000;
+            }
+            .MuiTypography-root {
+                color: #fff;
+            }
+            .css-78trlr-MuiButtonBase-root-MuiIconButton-root {
+                color: #8b888d;
+            }
+        }
+    }
+}

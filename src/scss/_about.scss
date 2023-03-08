@@ -1,0 +1,29 @@
+.about, .terms {
+    padding: 5rem 4rem;
+}
+
+.about .intro, .about .contacts, .terms {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    a {
+        color: $DarkViolet;
+        &:hover {
+            text-decoration: none;
+            color: $mainGreen;
+        }
+    }
+}
+
+.about {
+    .contacts {
+        margin-top: 25px;
+        img {height: 20rem;}
+        a {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            svg{margin-right: 10px;}
+        }
+    }
+}

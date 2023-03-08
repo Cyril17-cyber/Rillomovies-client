@@ -1,0 +1,165 @@
+.home {
+    padding: 6rem 2rem;
+    .movieCategory {
+        h2 {display: flex; align-items: center;}
+    }
+    .css-tcikc6-MuiPaper-root-MuiCard-root {
+        box-shadow: 5px 1px 7px 0px #2b272f;
+    } 
+}
+
+.home .movieCategory main, .home .skeletonSection main, .favourites {
+    display: grid;
+    gap: 80px 15px;
+    grid-template-rows: repeat(auto-fill, 38rem);
+    @media(min-width: 600px) {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 25rem);
+        width: 100%;
+    }
+}
+
+.favourites {
+    padding: 6rem 2rem;
+}
+
+.favMovie {
+    width: 100%;
+    height: 35rem;
+    a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        border-radius: 7px;
+        border: 1px solid $VeryDarkViolet;
+        box-shadow: 7px 8px 12px $VeryDarkViolet;
+    }
+}
+
+.movie {
+    height: 100vh;
+    &__main {
+        display: grid;
+        grid-column-gap: 135px;
+        grid-template-columns: repeat(2, 1fr);
+        position: relative;
+
+        .main {
+            h1 {
+                font-family: 'Paytone One', sans-serif !important;
+            }
+            &__links {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                margin: 72px 0px;
+                i {
+                    margin-right: 7px;
+                    color: #ffffff;
+                }
+                a {
+                    text-decoration: none;
+                    font-weight: 600;
+                }
+                .watch {
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                color: #ffffff;
+                background: #5b7487;
+                padding: 4px 15px;
+                border-radius: 31px;
+                transition: all 300ms ease-in-out;
+                
+                &:hover {
+                    box-shadow: -2px 3px 2px 1px #000000bd;
+                }
+                }
+                .download {
+                    display: flex;
+                align-items: center;
+                justify-content: space-around;
+                color: #ffffff;
+                background: #29182c;
+                padding: 4px 15px;
+                border-radius: 31px;
+                transition: all 300ms ease-in-out;
+                &:hover {
+                    box-shadow: -2px 3px 2px 1px #000000bd;
+                }
+                }
+            }
+        }
+        p {
+            font-size: 13px;
+            color: #ffffff;
+        }
+    }
+}
+
+.account {
+    padding: 6rem 2rem;
+    display: flex;
+    flex-direction: column;
+    .icon {
+        position: absolute;
+        bottom: 6px;
+        right: -5px;
+        padding: 8px;
+        background: #fff;
+        border-radius: 50%;
+    }
+    .picForm {
+        align-self: center;
+        position: relative;
+        border-radius: 50%;
+        margin: 30px 0px;
+        height: 10rem;
+        width: 10rem;
+        img {
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+    }
+    .detail {
+        position: relative;
+        padding: 15px 20px;
+        margin: 30px 0px;
+        box-shadow: 0px 0px 0px 1px #0f192c;
+        border-radius: 7px;
+        .icon {
+            cursor: pointer;
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 3.3rem;
+            bottom: -6px;
+            right: -11px;
+        }
+        &:hover {
+            box-shadow: 1px 1px 13px 2px #0f192c;
+        }
+    }
+    .deleteIcon {
+        align-self: center;
+    }
+
+    button {
+        font-size: 18px;
+        padding: 15px 20px;
+        border-radius: 10px;
+        background: $DarkViolet;
+        color: $white;
+        border: 1px solid $DarkViolet;
+        &:hover {
+            background: $white;
+            color: $DarkViolet;
+        }
+    }
+}

@@ -1,0 +1,38 @@
+.landing-page .banner, .landing-page .features >div, .features >div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    grid-column-gap: 20px;
+    img {
+        width: 100%;
+    }
+}
+.landing-page .features, .landing-page .about, .features {h1{text-align: center;}}
+
+.landing-page .features, .features {
+    padding: 2rem 4rem;
+    >div {margin-bottom: 3rem;}
+}
+
+.landing-page {
+    .about {
+        h1 {margin: 0px;}
+        padding: 2rem 0px;
+    }
+    .banner {
+        padding: 2rem 4rem 12rem;
+        
+        .text {
+            h1 {color: $DarkMode}
+            a {
+                padding: 10px 15px;
+                border-radius: 7px;
+                color: $white;
+                text-decoration: none;
+                background-image: linear-gradient(to right, $DarkViolet, $DarkMode);
+                margin-top: 10px;
+            }
+            p {color: $DarkGrayishViolet}
+        }
+    }
+}
