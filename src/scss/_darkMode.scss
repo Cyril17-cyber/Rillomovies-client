@@ -1,9 +1,9 @@
 .App {
     &.DarkMode {
-        .css-1n7gpw1-MuiSkeleton-root {
+        .skeleton {
             background-color: rgba(255, 255, 255, 0.308);
         }
-        .css-pl5i8u-MuiPaper-root-MuiCard-root {
+        .movieHolder {
             background-color: $VeryDarkViolet
         }
         .logout {

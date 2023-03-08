@@ -59,7 +59,7 @@ export default function CardHolder({item, userDetails, setUserDetails, setPopUp,
     });
     }
   return (
-    <Card sx={{ maxWidth: '25rem', height: '100%'}}>
+    <Card sx={{ maxWidth: '25rem', height: '100%'}} className="movieHolder">
       <CardMedia
        onClick={handleMovieClick}
         sx={{ height: '25rem' }}

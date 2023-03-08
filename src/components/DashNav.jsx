@@ -340,7 +340,7 @@ const handleMovieClick = (item)=> {
     <>{JSON.stringify(user) === "{}"? <div></div> :
     <div className="dashNav">
       <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar position="static" className="dashNavBar">
         <Toolbar>
         <Box sx={{ flexGrow: 0 }}>
             <Tooltip title="Open settings">

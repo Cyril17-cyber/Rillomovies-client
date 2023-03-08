@@ -116,14 +116,14 @@
     }
 }
 
-.css-hip9hq-MuiPaper-root-MuiAppBar-root, .css-1gnz8kn-MuiBottomNavigation-root {
+.dashNavBar, .bottomNav {
     background-color: $VeryDarkViolet !important;
 }
 
-.css-1bjk3jo-MuiButtonBase-root-MuiBottomNavigationAction-root.Mui-selected {
+.css-1bjk3jo-MuiButtonBase-root-MuiBottomNavigationAction-root.Mui-selected, .css-sxw2zh.Mui-selected {
     color: $white !important;
 }
-.css-118p9r0-MuiButtonBase-root-MuiBottomNavigationAction-root {
+.bottomNavBtn {
     color: rgba(255, 255, 255, 0.452) !important;
 }
 

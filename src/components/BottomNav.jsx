@@ -23,19 +23,19 @@ export default function BottomNav({setSearchMenu}) {
       <BottomNavigationAction
         label="Home"
         value="home"
-        icon={<Home />}
+        icon={<Home />} className="bottomNavBtn"
       />
       <BottomNavigationAction
         label="Favorites"
         value="favorites"
-        icon={<FavoriteIcon />}
+        icon={<FavoriteIcon />} className="bottomNavBtn"
       />
       <BottomNavigationAction
         label="Recent"
         value="recent"
-        icon={<RestoreIcon />}
+        icon={<RestoreIcon />} className="bottomNavBtn"
       />
-      <BottomNavigationAction label="Info" value="info" icon={<Info />} />
+      <BottomNavigationAction label="Info" value="info" icon={<Info />} className="bottomNavBtn" />
     </BottomNavigation>
     </Paper>
   );
