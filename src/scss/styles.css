@@ -394,6 +394,7 @@ button {
 }
 
 .register {
+  min-height: 100vh;
   padding: 2rem 4rem;
   position: relative;
 }
@@ -591,6 +592,7 @@ button {
 }
 
 .about .intro, .about .contacts, .terms {
+  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -693,7 +695,7 @@ button {
 }
 
 .movie {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .movie__main {
@@ -721,9 +723,8 @@ button {
   margin: 72px 0px;
 }
 
-.movie__main .main__links i {
+.movie__main .main__links svg {
   margin-right: 7px;
-  color: #ffffff;
 }
 
 .movie__main .main__links a {
@@ -777,7 +778,6 @@ button {
 
 .movie__main p {
   font-size: 13px;
-  color: #ffffff;
 }
 
 .account {
@@ -1011,16 +1011,11 @@ button {
 }
 
 @media (max-width: 900px) {
-  .movie__main .main {
-    color: #ffffff;
-  }
   .movie__main .main h1 {
     font-family: 'Paytone One', sans-serif !important;
-    color: #ffffff;
   }
   .movie__main p {
     font-size: 13px;
-    color: #ffffff;
   }
 }
 
@@ -1176,9 +1171,14 @@ button {
   background-image: linear-gradient(to right, #ececec, #fff);
 }
 
-.App.DarkMode .features, .App.DarkMode .landing-page .features, .App.DarkMode .register, .App.DarkMode .home, .App.DarkMode .favourites {
-  background: #2b272f;
+.App.DarkMode .features, .App.DarkMode .landing-page .features, .App.DarkMode .register, .App.DarkMode .home, .App.DarkMode .favourites, .App.DarkMode .movie {
+  background: #211e24;
   color: #fff;
+}
+
+.App.DarkMode .movie__main .main__links .download {
+  color: #211e24;
+  background: #fff;
 }
 
 .App.DarkMode .account {

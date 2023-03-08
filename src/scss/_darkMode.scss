@@ -80,10 +80,14 @@
                 }
             }
         }
-        .features, .landing-page .features, .register, .home, .favourites {
-            background: $VeryDarkViolet;
+        .features, .landing-page .features, .register, .home, .favourites, .movie {
+            background: $DarkMode;
             color: $white;
         }
+        .movie {&__main {.main {&__links {.download {
+            color: $DarkMode;
+            background: $white;
+        }}}}}
         .account {
             background: $DarkMode; color: $white;
             .detail {

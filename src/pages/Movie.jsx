@@ -47,9 +47,10 @@ const navigate = useNavigate();
             <CircularProgress color="inherit" />
           </Backdrop> :
 
-<div className='movie' style={{backgroundImage: `url('${movie.img}')`, padding: '6rem 2rem',     backgroundRepeat: 'no-repeat',
-backgroundSize: 'cover'}}>
-    <div class="movie__main">
+<div className='movie' style={{padding: '4rem 0rem'}}>
+  <div className="image"  style={{backgroundImage: `url('${movie.img}')`, height: '50%', width: '100%',     backgroundRepeat: 'no-repeat',
+backgroundSize: 'cover'}}></div>
+    <div class="movie__main" style={{padding: '3rem 2rem'}}>
     <main class="main">
         <h1>{movie.name}</h1>
         <h4>{movie.category} | {movie.type}</h4>
