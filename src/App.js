@@ -28,7 +28,7 @@ function App() {
   const [userImage, setUserImage] = useState("");
   const [userDetails, setUserDetails] = useState({});
   const [mobileMenu, setMobileMenu] = useState(false);
-  const [darkMode, setDarkMode] = useState("light");
+  const [darkMode, setDarkMode] = useState(false);
   const [popUp, setPopUp] = useState(false);
   const [filter, setFilter] = useState("All");
   const [logOut, setLogout] = useState(false);
@@ -37,11 +37,16 @@ function App() {
   const [searchMenu, setSearchMenu] = useState(false);
   const [movies, setMovies] = useState([]);
   
-  useEffect(()=> {
-    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
-      const colorScheme = event.matches ? "dark" : "light";
-      darkMode(colorScheme);
-    })
+  useEffect(() => {
+    const prefersDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    setDarkMode(prefersDarkMode);
+
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    const handleChange = () => setDarkMode(mediaQuery.matches);
+
+    mediaQuery.addEventListener('change', handleChange);
+    return () => mediaQuery.removeEventListener('change', handleChange);
   }, []);
 
   function mobileSetter() {
@@ -52,11 +57,7 @@ function App() {
 
 function darkModeSetter() {
   setDarkMode((prevValue)=> {
-      if(prevValue === "light") {
-        return "dark"
-      } else {
-        return "light"
-      }
+      return !prevValue
   });
 }
 
@@ -70,9 +71,9 @@ function hideLogOut() {
 
   return (
     <main className={!mobileMenu ? 'Body' : 'Body visibleMenu'}>
-      <div className={darkMode === "light" ? 'App' : 'App DarkMode'}>
+      <div className={!darkMode ? 'App' : 'App DarkMode'}>
       <Router>
-      {JSON.stringify(userDetails) === "{}" ? <Nav mobileSetter={mobileSetter} items={userDetails} darkMode={darkMode} darkModeSetter={darkModeSetter}  /> : <DashNav user={userDetails} userImage={userImage} setUserImage={setUserImage} darkMode={darkMode} darkModeSetter={darkModeSetter} setFilter={setFilter} popUp={popUpDash} setPopUp={setPopUpDash} popMessage={popMessage} setPopMessage={setPopMessage} setSearchMenu={setSearchMenu} searchMenu={searchMenu} movies={movies} setUserDetails={setUserDetails} logOut={showLogOut} />}
+      {JSON.stringify(userDetails) === "{}" ? <Nav mobileSetter={mobileSetter} darkMode={darkMode} darkModeSetter={darkModeSetter}  /> : <DashNav user={userDetails} userImage={userImage} setUserImage={setUserImage} darkMode={darkMode} darkModeSetter={darkModeSetter} setFilter={setFilter} popUp={popUpDash} setPopUp={setPopUpDash} popMessage={popMessage} setPopMessage={setPopMessage} setSearchMenu={setSearchMenu} searchMenu={searchMenu} movies={movies} setUserDetails={setUserDetails} logOut={showLogOut} />}
       {mobileMenu && <MobileNavigation mobileSetter={mobileSetter} />}
       <Popup close={setPopUp} open={popUp} />
       {logOut && <Logout setHomeItems={setUserDetails} hide={hideLogOut} />}

@@ -329,7 +329,7 @@ const handleMovieClick = (item)=> {
           aria-haspopup="true"
           color="inherit"
         >
-          {darkMode === "light" ? <DarkMode /> : <LightMode />}
+          {!darkMode ? <DarkMode /> : <LightMode />}
         </IconButton>
         <p>Dark Mode</p>
       </MenuItem>
@@ -428,7 +428,7 @@ const handleMovieClick = (item)=> {
               onClick={darkModeSetter}
               color="inherit"
             >
-              {darkMode? <DarkMode /> : <LightMode />}
+              {!darkMode? <DarkMode /> : <LightMode />}
             </IconButton>
           </Box>
           <Box sx={{ display: { xs: 'flex', md: 'none' } }}>

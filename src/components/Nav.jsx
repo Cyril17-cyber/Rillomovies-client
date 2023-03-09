@@ -4,12 +4,12 @@ import logo from '../images/logo.png';
 import { DarkMode, LightMode } from '@mui/icons-material';
 
 
-function Nav(props) {
+function Nav({darkMode, mobileSetter, darkModeSetter}) {
 
     return(
         <nav className="nav">
 
-        <div onClick={props.mobileSetter} id="hamburger">
+        <div onClick={mobileSetter} id="hamburger">
             <span></span>
             <span></span>
             <span></span>
@@ -27,7 +27,7 @@ function Nav(props) {
             </section>
 
             <section className="method">
-            {props.darkMode === "light"? <DarkMode onClick={props.darkModeSetter} /> : <LightMode onClick={props.darkModeSetter} />}
+            {!darkMode? <DarkMode onClick={darkModeSetter} /> : <LightMode onClick={darkModeSetter} />}
             
             <Link to={'/register'} className='login'>Sign Up</Link>
             </section>
