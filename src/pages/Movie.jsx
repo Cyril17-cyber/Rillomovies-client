@@ -48,7 +48,7 @@ const navigate = useNavigate();
           </Backdrop> :
 
 <div className='movie' style={{padding: '4rem 0rem'}}>
-  <div className="image"  style={{backgroundImage: `url('${movie.img}')`, height: '50%', width: '100%',     backgroundRepeat: 'no-repeat',
+  <div className="image"  style={{backgroundImage: `url('${movie.img}')`, height: '100vh', width: '100%',     backgroundRepeat: 'no-repeat',
 backgroundSize: 'cover'}}></div>
     <div class="movie__main" style={{padding: '3rem 2rem'}}>
     <main class="main">
