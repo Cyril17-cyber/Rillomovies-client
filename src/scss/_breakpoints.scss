@@ -9,7 +9,8 @@
     .movie {
         &__main {
             @media (max-width: 993px) {
-                display: block;
+                display: flex;
+                flex-direction: column-reverse;
             }
             display: grid;
             grid-column-gap: 135px;
